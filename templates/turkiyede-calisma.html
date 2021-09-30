@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block style %}
+<style>
+  .accordion {
+    background-color: #F3A01D;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-bottom: 2px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #F3A01D; 
+  }
+  
+  .panel {
+    padding: 6px 18px;
+    display: none;
+    background-color: #ccc;
+    overflow: hidden;
+  }
+  </style>
+  
+    {% endblock %}
+
+
+
+      
+{% block content %}
+
+    
+        
+    <div class="work"></div>
+    <div class="container">
+    <h2>TÜRKİYE'DE ÇALIŞMA
+    </h2><br />
+        
+
+        
+
+        <div style="float:left; width: 45%;">
+          {% for x in work_page %}
+          <b class="turuncubaslik">{{ x.title}}</b><br />
+          &nbsp;&nbsp;&nbsp;{{x.text}}
+          <br /><br />
+          
+            {% endfor %}
+        <br /><br /><br />
+
+        </div>
+        <div style="float:right; width: 45%;">
+
+          {% for x in features %}
+            <button class="accordion">{{x.title}}</button>
+            <div class="panel">
+              {{x.text}}
+                <br />
+                <br />
+                <a style="float: right; color: #F3A01D;" href="{% url 'show_details' x.id %}">Detaylı Bilgi >></a>
+            </div>
+
+{% endfor %}
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+
+            <img src="design/images/ortakoy.png" style="width: 100%; display: none;" />
+            <br /><br />
+
+           
+
+        </div>
+    </div>
+
+{% endblock %} 

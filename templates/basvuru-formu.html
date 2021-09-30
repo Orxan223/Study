@@ -1,0 +1,161 @@
+
+
+    {% extends "base.html" %}
+    {% load static %}
+      {% block content %}
+      
+    
+        
+    <div class="contact"></div>
+    <div class="container">
+    <h2>Online Başvuru Formu</h2><br />
+        
+    <section id="contact">
+      <div class="container">
+       <div class="row">
+         <div class="col-lg-8 col-md-8 col-sm-8">
+           <div class="contact_form wow fadeInLeft">
+               
+              <form  method="POST"   class="submitphoto_form" enctype="multipart/form-data">
+				{% csrf_token %} 
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzMxNDUyODUzD2QWAmYPZBYCAgMPZBYEAgEPFgIeBFRleHRlZAIDDxYCHgdlbmN0eXBlBRNtdWx0aXBhcnQvZm9ybS1kYXRhZGTaR0+jZveTMP2E1dgms5juYizGehLbq0hnRxSDt/jvdw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1518EEDA" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdADrNC9RmKsKXOjvxfnBMPj3+2v8SJOSyjoMyomS4GuYWawrtTPPYlM1WwXmmofQbYMMuuiyGGAqq6M8p1y/DGDyxdDDvYliicRooRqrS2RJHJxGwYf1xyFdcoCFfiyNjfiaQuMTaakdYKE37FIDylmVGs1IPeunaHZ4wsfbjK61sygh5X8qdAXCJ8Ql9glf0H6dTlLHEwKCOc09z3i9Xa9ccjasux8r5SRwH1iG5Wi6jY5kZmIa5UZJVMHUbcn74UJdeUw+1SKNJkd9kNNgP9Df54LfEBNNxhCe9wHS6ZaJsnLBlxKADl23tai9EkX2ix/0cdCIi5dMAGuhNRefQHFlNZWghUc4EDzfl0d+nOVh3zzg/J3/pbxn3Yo8NOMyQwu2g6u76vzU2+Pn0M4CZJB+Kzpow2i1fRRcmuJNSGClf+3Mrm7Qgwx5u5FY26xk4wPw7MDaGnnhcxdOJrQwxfLOu5YNcQD/bB8VMUtPFZlf9yHzbMDyayjzWjm7ZYYZbeSQ97SuT74wxXO0NdgZZfqVk1sc2Z4FuUAEB6As/1CTqprdNxXGamZY6yoPmCfuko58dPbIT/Jhs9RQrWkDTCT96yXjlzBi/wjEcMKINlVkByJjgWNJDXaLmJfCnhP/zGLDntBeFzQKPsF72Zp/zqndAO3Ensy6N65qcNix3BGN8hm0NR9C7xCv/vbP+ptRg32ZavuimFo5K7CEjC4kywXKsR1INUZioytsdigWI12SJZ4Tu4bqVyLGaY02jbwwU4tasCAdotmNkpaTii+5dQZNBqbbSBU9GXTbT0paQZKOzXaY1VbbOodYoAtxGuqSimRXnoX0mRUvxgOqJ9rSuYlCFL6MINTD/gxdpOOcFZaOCLntKHIkQaiL2vvtFXCUuAzSntQ5qEgkf27eABPAiPTWrfgqSK4irKpO1j4sRbK1WwNJUOcKXr8kvILOyX3HGSddpANXjgfW2DpNV0L7n1k8PZYdX4XfLTuuthx55dMczbsX5D07+0A3k5zj7m/UAAJ0cngT6e/lOzcAMg/vIRvCUL2DAEcoyyqC0lzeuV4By5kuK8NSkuFlg+zMMFMl2rouHXChv7PuGPfhYTYucytTIc3qTle56Y7dfU2MZ71JhR5e3fC3NsHqQSZTqpdQS9OpQ0Kvhs6l9eMaiKbCbulYU6aZn5ArvSzr8udDPuVTVt5WYuvPLrkMGo7Nq/sDlwEc5olkStEoOBipQ9KZhaUf7E74dOsWP4GHunTD5LvRFc4QQdNLlNksz56GVtNiOt9I=" />
+</div>
+
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 18px;">Kişisel Bilgileriniz</b><br /><br />
+                  <div style="display: block; clear: both;">
+                    <input name="name" type="text" id="ctl00_ContentPlaceHolder2_txtad" class="wp-form-control wpcf7-text" placeholder="Adınız" style="width: 48%; float: left;" />
+                    <!-- {{f.name}} -->
+                    <input name="surname" type="text" id="ctl00_ContentPlaceHolder2_txtsoyad" class="wp-form-control wpcf7-text" placeholder="Soyadınız" style="width: 48%; float: right;" />
+                    <!-- {{f.surname}} -->
+                  </div>
+
+                  <select name="country" id="ctl00_ContentPlaceHolder2_txtuyruk" class="wp-form-control wpcf7-text" style="color: #666;" aria-required="true" aria-invalid="true">
+					{% for x in country %}
+					<option value="{{x.id}}" name={{x.id}} >{{x.name}}</option>
+					{% endfor %}
+				</select>
+        <!-- {{f.country}} -->
+
+                  <div style="display: block; clear: both;">
+                  <input name="born_date" type="date" id="ctl00_ContentPlaceHolder2_txtdogum" class="wp-form-control wpcf7-text" placeholder="Doğum Tarihiniz" style="width: 48%; float: left; color: #666;" />
+                  <!-- {{f.born_date}} -->
+                  <select name="gender" id="ctl00_ContentPlaceHolder2_ddlcinsiyet" class="wp-form-control wpcf7-text" placeholder="Cinsiyetiniz" style="width: 48%; float: right; color: #666;">
+					<option value="0">Cinsiyetiniz</option>
+					<option value="1">Erkek</option>
+					<option value="2">Kadın</option>
+
+				</select>
+                      <!-- {{f.gender}} -->
+                  </div>
+
+                  <input name="phone" type="text" id="ctl00_ContentPlaceHolder2_txttel" class="wp-form-control wpcf7-text" placeholder="Telefon numaranız" />
+                  <!-- {{f.phone}} -->
+                  <input name="email" type="text" id="ctl00_ContentPlaceHolder2_txtmail" class="wp-form-control wpcf7-text" placeholder="E mail adresiniz" />
+                  <!-- {{f.email}} -->
+
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 18px;">Eğitim Bilgileriniz</b><br /><br />
+                  <div style="display: block; clear: both;">
+                    
+                      <select name="uni" id="ctl00_ContentPlaceHolder2_ddluniversite" class="wp-form-control wpcf7-text" placeholder="İstediğiniz Üniversite" style="width: 48%; float: left; color: #666;">
+						{% for x in uni %}
+						<option value="{{x.id}}">{{x.uni_name}}</option>
+						{% endfor %}
+					</select>
+
+                  <!-- {{f.university}} -->
+
+                    <input name="program" type="text" id="ctl00_ContentPlaceHolder2_txtbolum" class="wp-form-control wpcf7-text" placeholder="İstediğiniz Program" style="width: 48%; float: right;" />
+                    <!-- {{f.program}} -->
+                  </div>
+
+                  <div style="display: block; clear: both;">
+                    <select name="edu_degree" id="ctl00_ContentPlaceHolder2_ddlprogram" class="wp-form-control wpcf7-text" style="width: 48%; float: left; color: #666;">
+					{% for x in degree %}
+					<option value="{{x.id}}">{{x.degree}}</option>
+					{% endfor %}
+					</select>
+
+                    <!-- {{f.edu_degree}} -->
+
+                    <select name="edu_lang" id="ctl00_ContentPlaceHolder2_ddldil" class="wp-form-control wpcf7-text" style="width: 48%; float: right; color: #666;">
+						{% for x in lang %}
+						<option value="{{x.id}}">{{x.lang}}</option>
+						{% endfor %}
+
+					</select>
+                  
+                    <!-- {{f.edu_lang}} -->
+
+                  </div>
+
+                  <div style="display: block; clear: both;">
+                    <input name="budget" type="text" id="ctl00_ContentPlaceHolder2_txtbutce" class="wp-form-control wpcf7-text" placeholder="Bütçeniz" style="width: 48%; float: left;" />
+                    <!-- {{f.budget}} -->
+                      <select name="edu_currency" id="ctl00_ContentPlaceHolder2_ddlPara" class="wp-form-control wpcf7-text" style="width: 48%; float: right; color: #666;">
+
+						{% for x in currency %}
+						<option value="{{x.id}}">{{x.currency}}</option>
+						{% endfor %}
+
+					</select>
+                      <!-- {{f.edu_currency}} -->
+                    </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 18px;">Dosyalarınız</b> <span style="font-size: 11px; color: #666;">(mümkünse pdf veya jpg formatında dosyalar seçiniz)</span><br />
+                  
+                  <div style="display: block; clear: both;">
+                      <div style="width: 48%; float: left; color: #666; background-color: #fff; padding-top: 24px;">
+                          &nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:16px;">Diploma:</b><br /> &nbsp;&nbsp;&nbsp;&nbsp;(Türkçe veya İngilizce)<br /> 
+                          <input type="file" name="diploma" id="ctl00_ContentPlaceHolder2_fuDiploma" class="wp-form-control wpcf7-text" />
+                          <!-- {{f.diploma}} -->
+                      </div>
+                      <div style="width: 48%; float: right; color: #666; background-color: #fff; padding-top: 24px;">
+                          &nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:16px;">Not dökümü (Karne):</b><br /> &nbsp;&nbsp;&nbsp;&nbsp;(Türkçe veya İngilizce):<br /> 
+                          <input type="file" name="note" id="ctl00_ContentPlaceHolder2_fuKarne" class="wp-form-control wpcf7-text" />
+                          <!-- {{f.note}} -->
+                      </div>
+                      <div style="width: 48%; float: left; color: #666; background-color: #fff; padding-top: 24px; margin-top: 12px;">
+                          &nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:16px;">Pasaport:</b><br />
+                          <input type="file" name="passport" id="ctl00_ContentPlaceHolder2_fuPasaport" class="wp-form-control wpcf7-text" />
+                          <!-- {{f.passport}} -->
+                      </div>
+                      <div style="width: 48%; float: right; color: #666; background-color: #fff; padding-top: 24px; margin-top: 12px;">
+                          &nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size:16px;">Fotoğrafınız:</b><br />
+                          <input type="file" name="photo" id="ctl00_ContentPlaceHolder2_fuFoto" class="wp-form-control wpcf7-text" />
+                          <!-- {{f.photo}} -->
+                      </div>
+                  </div>
+                  
+                  
+                  
+                  
+
+                  <textarea name="message" rows="10" cols="30" id="ctl00_ContentPlaceHolder2_txtmesaj" class="wp-form-control wpcf7-textarea" placeholder="Mesajınız (varsa)">
+</textarea>
+                  <!-- {{f.message}} -->
+<input type="submit" name="ctl00$ContentPlaceHolder2$btnGonder" value="Başvuru Yap" id="ctl00_ContentPlaceHolder2_btnGonder" class="wpcf7-submit" />
+                  
+              </form>
+			  
+           </div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-sm-4">
+           <div class="contact_address wow fadeInRight">
+            <img src=" {% static 'design/images/application.jpg' %}" alt="application student" style="width: 100%;" />
+           </div>
+         </div>
+       </div>
+      </div>
+    </section>
+
+    </div>
+
+    {% endblock %}
+
+

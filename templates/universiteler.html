@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load i18n %}
+    <div class="about"></div>
+    <div class="container">
+    <h2>{% translate 'PARTNYOR UNİVERSİTETLƏR' %}</h2><br />
+        <div class="newsfeed_area wow fadeInRight">
+            <ul class="nav nav-tabs feed_tabs" id="myTab2">
+              <li class="lablinks active" onclick="openTab(event, 'ozel')"><a data-toggle="tab" style="color: #0094ff">{% translate 'ÖZƏL UNİVERSİTETLƏR' %}</a></li>
+              <li class="lablinks" onclick="openTab(event, 'devlet')"><a data-toggle="tab" style="color: #ff6a00">{% translate 'DÖVLƏT UNİVERSİTETLƏRİ' %}</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+              <div class="tabcontent" id="ozel">
+                {% for x in uni_private %}
+                  <div class="unikutu"><div class="universities"><img src="{{x.uni_img.url}}" /></div></div>
+                {% endfor %}  
+              </div>
+
+              <div class="tabcontent " id="devlet">
+                {% for a in uni_state %}
+                  <div class="unikutu"><div class="universities"><img src="{{a.uni_img.url}}" /></div></div>
+                {% endfor %}  
+
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+{% endblock %}
+   

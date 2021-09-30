@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{{feature.title}}</title>
+{% endblock %}
+
+  {% block content %}        
+    <div class="work"></div>
+    <div class="container">
+    <h2>{{feature.title}}</h2><br />
+        
+    {% for x in details %}
+        
+        <br /><br />
+        {% if x.title is not None %}
+<b class="turuncubaslik">{{x.title}}</b><br />
+{% endif %}
+
+{{x.text}}
+
+{% endfor %}
+
+
+    </div>
+    <br /><br />
+    
+{% endblock %}
+    

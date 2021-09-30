@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+   {% block content %}     
+     <div class="universityhousing"></div>
+    <div class="container">
+    <h2>KONAKLAMA</h2><br />
+        {% if image.img %}
+        <img src="{{image.img.url}}" align="right" style="text-align: right; width: 40%; padding: 0px 0px 10px 10px;" />
+        {% endif %}
+    <p>
+      {% for x in guest %}
+        <b class="turuncubaslik">{{x.title}}</b><br />
+        {{x.text}}
+        <br /><br />
+      {% endfor %}
+    </div>
+
+    {% endblock %}
+

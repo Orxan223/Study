@@ -1,0 +1,192 @@
+{% extends "base-news.html" %}
+    <!-- Post -->
+    {% block content %}
+    <section class="bg0 p-t-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 p-b-30">
+                    <div class="p-r-0-sr991">
+                        
+                        <div class="p-b-30 bad-bor1 m-b-40">
+                            <h3 class="f1-l-3 cl2 p-b-16 p-t-15 respon2">
+                                {{news_detail.title}} </h3>
+                            <div class="flex-wr-s-s p-b-30">
+                                <span class="f1-s-3 cl8 m-r-15">
+                                    <span>{{news_detail.timestamp}}</span>
+                                </span>
+                                <span class="f1-s-3 cl8 m-r-15">
+                                    {{news_detail.views}} </span>
+                            </div>
+
+                            <div class="wrap-pic-max-w m-b-30 pos-relative" style="height: 300px;">
+                                <span class="dis-sub-item-tag">
+                                </span>
+                                <img src="{{news_detail.news_img.url}}" alt="IMG">
+                            </div>
+
+
+                            <div class="row" style="width: 100%;">
+                                <div class="col-md-12 cs_content_news_col cs_content_photo_size">
+                                    <p>{{news_detail.text}}</p>
+
+                                    
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-12 mt-4">
+                                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                                    <script type="text/javascript"
+                                        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fd9e418602f2bc4"></script>
+                                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                                    <div class="addthis_inline_share_toolbox"
+                                        data-url="https://tehsil.biz/news/az/19572/Bak-Slavyan-Universitetinin-tlbsi-sertifikata-layiq-grlb"
+                                        data-title="Bakı Slavyan Universitetinin tələbəsi sertifikata layiq görülüb"
+                                        style="clear: both;">
+                                        <div id="atstbx"
+                                            class="at-share-tbx-element addthis-smartlayers addthis-animated at4-show"
+                                            aria-labelledby="at-e149bcf2-acb4-4ae6-97de-7d8019b96cb4" role="region">
+                                            <span id="at-e149bcf2-acb4-4ae6-97de-7d8019b96cb4"
+                                                class="at4-visually-hidden">AddThis Sharing
+                                                Buttons</span>
+                                            <div class="at-share-btn-elements"><a role="button" tabindex="0"
+                                                    class="at-icon-wrapper at-share-btn at-svc-facebook"
+                                                    style="background-color: rgb(59, 89, 152); border-radius: 0px;"><span
+                                                        class="at4-visually-hidden">Share to Facebook</span><span
+                                                        class="at-icon-wrapper"
+                                                        style="line-height: 32px; height: 32px; width: 32px;"><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                                            aria-labelledby="at-svg-facebook-1"
+                                                            class="at-icon at-icon-facebook"
+                                                            style="fill: rgb(255, 255, 255); width: 32px; height: 32px;">
+                                                            <title id="at-svg-facebook-1">Facebook</title>
+                                                            <g>
+                                                                <path
+                                                                    d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </g>
+                                                        </svg></span></a><a role="button" tabindex="0"
+                                                    class="at-icon-wrapper at-share-btn at-svc-twitter"
+                                                    style="background-color: rgb(29, 161, 242); border-radius: 0px;"><span
+                                                        class="at4-visually-hidden">Share to Twitter</span><span
+                                                        class="at-icon-wrapper"
+                                                        style="line-height: 32px; height: 32px; width: 32px;"><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                                            aria-labelledby="at-svg-twitter-2"
+                                                            class="at-icon at-icon-twitter"
+                                                            style="fill: rgb(255, 255, 255); width: 32px; height: 32px;">
+                                                            <title id="at-svg-twitter-2">Twitter</title>
+                                                            <g>
+                                                                <path
+                                                                    d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336"
+                                                                    fill-rule="evenodd"></path>
+                                                            </g>
+                                                        </svg></span></a><a role="button" tabindex="0"
+                                                    class="at-icon-wrapper at-share-btn at-svc-linkedin"
+                                                    style="background-color: rgb(0, 119, 181); border-radius: 0px;"><span
+                                                        class="at4-visually-hidden">Share to LinkedIn</span><span
+                                                        class="at-icon-wrapper"
+                                                        style="line-height: 32px; height: 32px; width: 32px;"><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                                            aria-labelledby="at-svg-linkedin-3"
+                                                            class="at-icon at-icon-linkedin"
+                                                            style="fill: rgb(255, 255, 255); width: 32px; height: 32px;">
+                                                            <title id="at-svg-linkedin-3">LinkedIn</title>
+                                                            <g>
+                                                                <path
+                                                                    d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </g>
+                                                        </svg></span></a><a role="button" tabindex="0"
+                                                    class="at-icon-wrapper at-share-btn at-svc-odnoklassniki_ru"
+                                                    style="background-color: rgb(213, 120, 25); border-radius: 0px;"><span
+                                                        class="at4-visually-hidden">Share to Odnoklassniki</span><span
+                                                        class="at-icon-wrapper"
+                                                        style="line-height: 32px; height: 32px; width: 32px;"><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                                            aria-labelledby="at-svg-odnoklassniki_ru-4"
+                                                            class="at-icon at-icon-odnoklassniki_ru"
+                                                            style="fill: rgb(255, 255, 255); width: 32px; height: 32px;">
+                                                            <title id="at-svg-odnoklassniki_ru-4">Odnoklassniki</title>
+                                                            <g>
+                                                                <path
+                                                                    d="M16.5 16.15A6.15 6.15 0 0 0 22.65 10c0-3.39-2.75-6.14-6.15-6.14-3.4 0-6.15 2.75-6.15 6.14.01 3.4 2.76 6.15 6.15 6.15zm0-9.17c1.67 0 3.02 1.35 3.02 3.02s-1.35 3.02-3.02 3.02-3.02-1.35-3.02-3.02 1.35-3.02 3.02-3.02zm7.08 9.92c-.35-.7-1.31-1.28-2.58-.27-1.73 1.36-4.5 1.36-4.5 1.36s-2.77 0-4.5-1.36c-1.28-1.01-2.24-.43-2.59.27-.6 1.22.08 1.8 1.62 2.79 1.32.85 3.13 1.16 4.3 1.28l-.98.98c-1.38 1.37-2.7 2.7-3.62 3.62-.55.55-.55 1.438 0 1.99l.17.17c.55.55 1.44.55 1.99 0l3.62-3.622 3.62 3.62c.55.55 1.44.55 1.99 0l.17-.17c.55-.55.55-1.44 0-1.99l-3.62-3.62-.98-.98c1.17-.12 2.96-.438 4.27-1.28 1.55-.988 2.23-1.58 1.62-2.788z">
+                                                                </path>
+                                                            </g>
+                                                        </svg></span></a><a role="button" tabindex="0"
+                                                    class="at-icon-wrapper at-share-btn at-svc-vk"
+                                                    style="background-color: rgb(99, 131, 168); border-radius: 0px;"><span
+                                                        class="at4-visually-hidden">Share to Vkontakte</span><span
+                                                        class="at-icon-wrapper"
+                                                        style="line-height: 32px; height: 32px; width: 32px;"><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                                            aria-labelledby="at-svg-vk-5" class="at-icon at-icon-vk"
+                                                            style="fill: rgb(255, 255, 255); width: 32px; height: 32px;">
+                                                            <title id="at-svg-vk-5">Vkontakte</title>
+                                                            <g>
+                                                                <path
+                                                                    d="M26.712 10.96s-.167-.48-1.21-.348l-3.447.024a.785.785 0 0 0-.455.072s-.204.108-.3.37a22.1 22.1 0 0 1-1.28 2.695c-1.533 2.61-2.156 2.754-2.407 2.587-.587-.372-.43-1.51-.43-2.323 0-2.54.382-3.592-.756-3.868-.37-.084-.646-.144-1.616-.156-1.232-.012-2.274 0-2.86.287-.396.193-.695.624-.515.648.227.036.742.143 1.017.515 0 0 .3.49.347 1.568.13 2.982-.48 3.353-.48 3.353-.466.252-1.28-.167-2.478-2.634 0 0-.694-1.222-1.233-2.563-.097-.25-.288-.383-.288-.383s-.216-.168-.527-.216l-3.28.024c-.504 0-.683.228-.683.228s-.18.19-.012.587c2.562 6.022 5.483 9.04 5.483 9.04s2.67 2.79 5.7 2.597h1.376c.418-.035.634-.263.634-.263s.192-.214.18-.61c-.024-1.843.838-2.12.838-2.12.838-.262 1.915 1.785 3.065 2.575 0 0 .874.6 1.532.467l3.064-.048c1.617-.01.85-1.352.85-1.352-.06-.108-.442-.934-2.286-2.647-1.916-1.784-1.665-1.496.658-4.585 1.413-1.88 1.976-3.03 1.796-3.52z"
+                                                                    fill-rule="evenodd"></path>
+                                                            </g>
+                                                        </svg></span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10 col-lg-4">
+                    <div class="p-b-23" style="
+	max-height: 1000px; 
+	overflow-x: hidden;
+    overflow-y: visible;
+">
+                        <div class="how2 how2-cl2 flex-s-c">
+                            <h3 class="f1-m-2 cl3 tab01-title">
+                                Xəbər lenti </h3>
+                        </div>
+                        <ul class="p-t-35">
+                            {% for x in daily %}
+                                {% if x.id != news_detail.id %}
+                                <li class="flex-wr-sb-s bad-bor1 m-b-12 p-b-12">
+                                    <div class="size-a-8">
+                                        {{x.timestamp.time}} </div>
+                                    <a href="{% url 'news_detail' x.id %}"
+                                        class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+                                        {{x.title}} </a>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+
+
+
+                        </ul>
+                    </div>
+
+                    <div style="float: left;width: 100%;margin-top: 20px;">
+                        <a href="#">
+                            <img style="width: 100%;" src="uploads/banner/banner_20210707120209.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+    <!-- Footer -->

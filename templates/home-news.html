@@ -1,0 +1,79 @@
+{% extends "base-news.html" %}
+	<!-- Post -->
+	{% block content %}
+	<section class="bg0 p-t-70">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-10 col-lg-8">
+					<div class="p-b-10">
+						<div class="tab01 p-b-20">
+							<div class="tab-content p-t-35">
+								<div class="tab-pane fade show active" id="tab2-1" role="tabpanel">
+									<div class="row">
+										{% for x in news %}
+										<div class="col-sm-6 p-r-15 p-r-15-sr991">
+
+											<div class="m-b-30 pos-relative">
+												<a href="{% url 'news_detail' x.id %}" class="wrap-pic-w hov1 trans-03 cs_img_pan">
+													<span class="dis-sub-item-tag">
+														{{x.category.name}} </span>
+													<img src="{{x.news_img.url}}" alt="IMG">
+												</a>
+												<div class="p-t-15">
+													<span class="cl8">
+														<span class="f1-s-3">
+															{{x.timestamp}} </span>
+													</span>
+													<h5 class="p-t-5">
+														<a href="{% url 'news_detail' x.id %}"
+															class="f1-m-3 cl2 hov-cl10 trans-03">
+															{{x.title}} </a>
+													</h5>
+												</div>
+											</div>
+
+										</div>
+										{% endfor  %}
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+				<div class="col-md-10 col-lg-4">
+					<div class="p-b-23" style="
+	max-height: 1000px; 
+	overflow-x: hidden;
+    overflow-y: visible;
+">
+						<div class="how2 how2-cl2 flex-s-c">
+							<h3 class="f1-m-2 cl3 tab01-title">
+								Xəbər lenti </h3>
+						</div>
+						<ul class="p-t-35">
+							{% for x in news_for_today %}
+							<li class="flex-wr-sb-s bad-bor1 m-b-12 p-b-12">
+								<div class="size-a-8">
+									{{x.timestamp.time}} </div>
+								<a href="{% url 'news_detail' x.id %}"
+									class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
+									{{x.title}}</a>
+							</li>
+							{% endfor %}
+
+
+						</ul>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	{% endblock %}
+

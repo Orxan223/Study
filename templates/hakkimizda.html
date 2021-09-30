@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+        {% block content %}
+    <div class="about"></div>
+    <div class="container">
+    <h2>HAKKIMIZDA
+    </h2><br />
+     
+      
+    <p>
+        <img src="{{image.url}}" align="right" style="text-align: right; width: 40%; padding: 0px 0px 10px 10px;" />
+        <b class="turuncubaslik">{{ about.who_are_we}}</b><br />
+        &nbsp;&nbsp;&nbsp;{{about.first_title}}
+        <br /><br />
+        
+
+    </p>
+    
+    </div>
+
+    {% endblock %}

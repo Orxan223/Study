@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+   
+{% block content %}
+
+    <div class="about"></div>
+    <div class="container">
+    <h2>TÜRKİYE'DE EĞİTİM GÖRMEK İÇİN 10 SEBEP</h2><br />
+
+    <p>
+      {% for x in edu %}
+      {% if x.img %}
+        <img src="{{x.img.url}}" align="right" style="text-align: right; width: 40%; padding: 0px 0px 10px 10px;" />
+      {% endif %}
+        <b class="turuncubaslik">{{x.title}}</b><br />
+        	{{x.text}}
+        <br /><br />
+      
+      {% endfor %}
+    </p>
+    </div>
+
+{% endblock %}
+    

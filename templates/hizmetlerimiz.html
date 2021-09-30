@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+    {% block content %}
+        
+    <div class="about"></div>
+    <div class="container">
+    <h2>HİZMETLERİMİZ</h2><br />
+        
+    <ul class="services">
+      {% for x in service %}
+        <li><img src="{{x.services_img.url}}" style="height: 36px;" /> {{x.title}}<p>{{x.text}}</p></li>
+      {% endfor %}  
+    </ul>
+
+    </div>
+{% endblock %}
